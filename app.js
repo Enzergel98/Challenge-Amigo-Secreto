@@ -41,3 +41,14 @@ function mostrarLista() {
         listaHTML.appendChild(li); 
     }
 }
+
+//Seleccionar un amigo aleatoreamente
+function sortearAmigo() {
+    if (listaAmigos.length === 0) {
+        alert("La lista está vacía. Agrega amigos antes de sortear.");
+        return;
+    }
+    let indiceAleatorio = Math.floor(Math.random() * listaAmigos.length);
+    let amigoSorteado = listaAmigos[indiceAleatorio];
+    document.getElementById("resultado").innerHTML = `¡¡¡El amigo seleccionado es: <strong>${amigoSorteado}</strong> !!!`;
+}
