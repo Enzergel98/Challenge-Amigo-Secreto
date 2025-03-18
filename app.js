@@ -29,3 +29,14 @@ function agregarAmigo() {
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
+// Mostrar la lista en el HTML
+function mostrarLista() {
+    let listaHTML = document.getElementById('listaAmigos'); 
+    listaHTML.innerHTML = ""; 
+
+    for (let i = 0; i < listaAmigos.length; i++) {
+        let li = document.createElement('li'); 
+        li.textContent = listaAmigos[i]; 
+        listaHTML.appendChild(li); 
+    }
+}
