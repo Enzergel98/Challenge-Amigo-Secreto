@@ -1,5 +1,5 @@
 // lista de participantes
-let listaDeAmigos = [];
+let listaAmigos = [];
 
 //Captura el valor de los datos de entrada
 function asignarTextoElemento(elemento, texto) {
@@ -15,12 +15,12 @@ function agregarAmigo() {
     if (nombreAmigos === ""){
         alert('Por favor, inserte un nombre.');
         return;
-    }  else if (listaDeAmigos.includes(nombreAmigos)) {
+    }  else if (listaAmigos.includes(nombreAmigos)) {
         alert('Este amigo ya está en la lista.');
         limpiarCaja();
         return;
     } else {
-        listaDeAmigos.push(nombreAmigos);
+        listaAmigos.push(nombreAmigos);
         console.log (listaDeAmigos);
     }
     mostrarLista(); 
@@ -32,12 +32,12 @@ function limpiarCaja() {
 
 // Mostrar la lista en el HTML
 function mostrarLista() {
-    let listaHTML = document.getElementById('listaDeAmigos'); 
+    let listaHTML = document.getElementById('listaAmigos'); 
     listaHTML.innerHTML = ""; 
 
-    for (let i = 0; i < listaDeAmigos.length; i++) {
+    for (let i = 0; i < listaAmigos.length; i++) {
         let li = document.createElement('li'); 
-        li.textContent = listaDeAmigos[i]; 
+        li.textContent = listaAmigos[i]; 
         listaHTML.appendChild(li); 
     }
 }
