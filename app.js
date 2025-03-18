@@ -1,4 +1,4 @@
-// lista de participantes
+//Lista de participantes
 let listaAmigos = [];
 
 //Captura el valor de los datos de entrada
@@ -8,7 +8,7 @@ function asignarTextoElemento(elemento, texto) {
     return;
 }
 
-//Verificar entradas y agregar a la lista
+//Verificar y agregar un amigo a la lista
 function agregarAmigo() {
     let nombreAmigos = document.getElementById('amigo').value;
   
@@ -21,7 +21,7 @@ function agregarAmigo() {
         return;
     } else {
         listaAmigos.push(nombreAmigos);
-        console.log (listaDeAmigos);
+        console.log (listaAmigos);
     }
     mostrarLista(); 
     limpiarCaja();
